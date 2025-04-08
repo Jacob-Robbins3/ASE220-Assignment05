@@ -1,0 +1,37 @@
+### Create a new blob
+POST http://localhost:3000/api/jsonBlob
+Content-Type: application/json
+
+{
+  "pets": []
+}
+
+###
+
+### Get blob by ID
+GET http://localhost:3000/api/jsonBlob/e1ae3136-ca88-462d-8354-52e80ef3dcc8
+
+###
+
+### Update blob
+PUT http://localhost:3000/api/jsonBlob/e1ae3136-ca88-462d-8354-52e80ef3dcc8
+Content-Type: application/json
+
+{
+  "pets": [
+    {
+      "name": "Bella",
+      "breed": "Golden Retriever",
+      "type": "Dog",
+      "age": 3,
+      "gender": "Female",
+      "status": "Spayed",
+      "image": "https://example.com/bella.jpg"
+    }
+  ]
+}
+
+###
+
+### Delete blob
+DELETE http://localhost:3000/api/jsonBlob/e1ae3136-ca88-462d-8354-52e80ef3dcc8
